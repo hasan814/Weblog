@@ -1,5 +1,45 @@
+.container {
+  display: flex;
+  gap: 6rem;
+}
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.subTitle {
+  color: var(--btn);
+}
+
+.title {
+  font-size: 3.3rem;
+}
+
+.desc {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+.boxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.box h1 {
+  color: var(--btn);
+}
+
 .imgContainer {
   position: relative;
-  width: 100px;
-  height: 500px;
+  flex: 1;
+}
+
+.img {
+  object-fit: contain;
 }

@@ -7,8 +7,10 @@ const HomePage = () => {
       <div className={styles.textContainer}>
         <h1 className={styles.title}>Create Thoughts Agency</h1>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum saepe
-          doloribus nihil earum rerum ducimus tenetur est aut ex impedit?
+          Creating a digital agency named &quot;Thoughts Agency&quot; involves
+          several steps, including defining the business model, establishing the
+          brand identity, setting up the necessary infrastructure, and launching
+          the business
         </p>
         <div className={styles.btns}>
           <button className={styles.btn}>Learn More</button>
