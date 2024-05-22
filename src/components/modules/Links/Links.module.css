@@ -20,6 +20,8 @@
   }
   .mobileLinks {
     position: absolute;
+    background-color: var(--bg);
+    z-index: 10;
     top: 6rem;
     right: 0;
     width: 50%;

@@ -16,3 +16,14 @@
   margin: 0 0.1rem;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .logo {
+    color: var(--btn);
+    text-transform: uppercase;
+  }
+}
