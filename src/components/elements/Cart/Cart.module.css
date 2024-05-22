@@ -1,0 +1,38 @@
+.top {
+  display: flex;
+}
+.imgContainer {
+  width: 90%;
+  height: 400px;
+  position: relative;
+}
+.img {
+  object-fit: cover;
+}
+.date {
+  font: 12px;
+  margin: auto;
+  transform: rotate(270deg);
+}
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.desc {
+  text-align: justify;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  color: gray;
+  width: 90%;
+}
+.link {
+  background-color: var(--btn);
+  padding: 0.7rem 1rem;
+  border: 0.1rem solid var(--btn);
+  border-radius: 0.5rem;
+}
+.link:hover {
+  background-color: transparent;
+  border-style: dashed;
+}
