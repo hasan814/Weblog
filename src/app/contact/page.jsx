@@ -1,5 +1,7 @@
+import ContactPage from "@/templates/Contact/ContactPage";
+
 const Contact = () => {
-  return <div>Contact</div>;
+  return <ContactPage />;
 };
 
 export default Contact;
