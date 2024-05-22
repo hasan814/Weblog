@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  gap: 100px;
+}
+.imgContainer {
+  flex: 1;
+  position: relative;
+  height: calc(100vh - 200px);
+}
+.textContainer {
+  flex: 2;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  font-size: 4rem;
+}
+.detail {
+  display: flex;
+  gap: 20px;
+}
+.detailText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.detailAuthor {
+  color: var(--btn);
+  font-weight: bold;
+}
+.detailPublished {
+  color: var(--btn);
+  font-weight: bold;
+}
+.content {
+  text-align: justify;
+}
+.avatar {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.img {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .imgContainer {
+    display: none;
+  }
+}
