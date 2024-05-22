@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: gray;
+  margin: 1rem 0;
+}
+.logo {
+  font-weight: bold;
+}
+.text {
+  font-size: 0.8rem;
+}
+.text span {
+  color: var(--btn);
+  margin: 0 0.1rem;
+  text-transform: uppercase;
+}
