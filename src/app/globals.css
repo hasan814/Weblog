@@ -1,3 +1,11 @@
+:root {
+  --bg: #0d0c22;
+  --bgSoft: #2d2b42;
+  --text: #fff;
+  --textSoft: #e5e5e5;
+  --btn: #3673fd;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +15,23 @@
   text-decoration: none;
   transition: all 0.2s linear;
   list-style: none;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a {
+  color: inherit;
 }
