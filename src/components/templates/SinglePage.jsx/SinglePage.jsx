@@ -1,7 +1,9 @@
 import Image from "next/image";
 import styles from "./SinglePage.module.css";
+import PostUser from "../PostUser/PostUser";
+import { Suspense } from "react";
 
-const SinglePage = () => {
+const SinglePage = ({ post }) => {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -13,7 +15,7 @@ const SinglePage = () => {
         />
       </div>
       <div className={styles.textContainer}>
-        <h1 className={styles.title}>Title</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <div className={styles.detail}>
           <Image
             src={"/Blog1.jpg"}
@@ -22,21 +24,15 @@ const SinglePage = () => {
             height={50}
             className={styles.avatar}
           />
+          <Suspense fallback={<div>Loading ...</div>}>
+            <PostUser userId={post.userId} />
+          </Suspense>
           <div className={styles.detailText}>
-            <span className={styles.detailAuthor}>Author</span>
-            <span className={styles.detailName}>Terry Jefferson</span>
-          </div>
-          <div className={styles.detailText}>
-            <span className={styles.detailPublished}>Published</span>
+            <span className={styles.published}>Published</span>
             <span className={styles.detailDate}>01.01.2024</span>
           </div>
         </div>
-        <div className={styles.content}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          soluta temporibus enim, consequatur tempore ea optio ullam pariatur
-          molestiae quidem quae aut in inventore voluptatum facilis maxime,
-          quisquam hic delectus?
-        </div>
+        <div className={styles.content}>{post.body}</div>
       </div>
     </div>
   );

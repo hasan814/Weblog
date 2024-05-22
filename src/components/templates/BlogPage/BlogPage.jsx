@@ -1,10 +1,10 @@
 import PostCard from "@/moduels/PostCard/PostCard";
 import styles from "./BlogPage.module.css";
 
-const BlogPage = () => {
+const BlogPage = ({ posts }) => {
   return (
     <div className={styles.container}>
-      <PostCard />
+      <PostCard posts={posts} />
     </div>
   );
 };

@@ -27,11 +27,7 @@
   align-items: center;
   justify-content: space-between;
 }
-.detailAuthor {
-  color: var(--btn);
-  font-weight: bold;
-}
-.detailPublished {
+.published {
   color: var(--btn);
   font-weight: bold;
 }
