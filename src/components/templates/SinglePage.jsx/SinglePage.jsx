@@ -1,7 +1,8 @@
+import { Suspense } from "react";
+
 import Image from "next/image";
 import styles from "./SinglePage.module.css";
 import PostUser from "../PostUser/PostUser";
-import { Suspense } from "react";
 
 const SinglePage = ({ post }) => {
   return (
