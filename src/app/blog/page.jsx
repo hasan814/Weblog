@@ -1,8 +1,8 @@
 import BlogPage from "@/templates/BlogPage/BlogPage";
-import { getPosts } from "@/utils/Data";
+import { getData } from "@/utils/Fetch";
 
 const Blog = async () => {
-  const posts = await getPosts();
+  const posts = await getData();
   return <BlogPage posts={posts} />;
 };
 
