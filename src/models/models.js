@@ -4,7 +4,7 @@ const userSchema = new Schema(
   {
     username: { type: String, required: true, min: 3, max: 20 },
     email: { type: String, required: true, uinique: true, max: 50 },
-    password: { type: String, required: true, min: 6 },
+    password: { type: String },
     img: { type: String },
     isAdmin: { type: Boolean, default: false },
   },
@@ -22,5 +22,5 @@ const postSchema = new Schema(
   { timestamps: true }
 );
 
-export const User = models.User || model("User", userSchema);
-export const Post = models.Post || model("Post", postSchema);
+export const User = models?.User || model("User", userSchema);
+export const Post = models?.Post || model("Post", postSchema);
