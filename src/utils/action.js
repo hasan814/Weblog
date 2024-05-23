@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { NextResponse } from "next/server";
 import { Post, User } from "@/models/models";
 import { connectDB } from "./connectDB";
+import { genSalt, hash } from "bcryptjs";
 
 export const addPost = async (formData) => {
   const { title, desc, slug, userId } = Object.fromEntries(formData);
@@ -58,10 +59,13 @@ export const register = async (formData) => {
     const user = await User.findOne({ username });
     if (user) return "Username already exists";
 
+    const salt = await genSalt(10);
+    const hashedPassword = await hash(password, salt);
+
     const newUser = new User({
       username,
       email,
-      password,
+      password: hashedPassword,
       img,
     });
     await newUser.save();
