@@ -53,7 +53,7 @@ export const register = async (formData) => {
   const { username, email, password, img, passwordRepeat } =
     Object.fromEntries(formData);
 
-  if (password !== passwordRepeat) return "Password do not match";
+  if (password !== passwordRepeat) throw new Error("Password do not match");
   try {
     await connectDB();
     const user = await User.findOne({ username });
@@ -70,6 +70,20 @@ export const register = async (formData) => {
     });
     await newUser.save();
     console.log("Save to DB");
+  } catch (error) {
+    console.log(error);
+    return NextResponse.json(
+      { error: "Something went wrong!" },
+      { status: 500 }
+    );
+  }
+};
+
+export const login = async (formData) => {
+  const { username, password } = Object.fromEntries(formData);
+
+  try {
+    await signIn("credentials", { username, password });
   } catch (error) {
     console.log(error);
     return NextResponse.json(
