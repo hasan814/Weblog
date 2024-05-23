@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 33rem;
+  background-color: var(--bgSoft);
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  border-radius: 0.5rem;
+}
+
+.github {
+  width: 100%;
+  padding: 1.2rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
