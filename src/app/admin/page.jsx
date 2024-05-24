@@ -1,5 +1,7 @@
+import AdminPage from "@/templates/Admin/AdminPage/AdminPage";
+
 const Admin = () => {
-  return <div>Admin</div>;
+  return <AdminPage />;
 };
 
 export default Admin;

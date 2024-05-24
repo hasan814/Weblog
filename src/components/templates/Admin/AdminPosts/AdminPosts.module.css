@@ -1,0 +1,23 @@
+.post {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.postBtn {
+  padding: 0.5rem 0.7rem;
+  background-color: rgba(220, 20, 60, 0.59);
+  color: var(--textColor);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.postBtn:hover {
+  transform: scale(1.1);
+}

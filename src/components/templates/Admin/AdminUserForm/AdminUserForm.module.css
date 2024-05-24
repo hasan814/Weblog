@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 4rem;
+}
+
+.container input,
+.container textarea,
+.container select {
+  padding: 1.2rem;
+  background-color: var(--bgSoft);
+  border: 0.1rem solid var(--btn);
+  border-radius: 0.5rem;
+  color: var(--textColor);
+}
+
+.container button {
+  padding: 1.2rem;
+  cursor: pointer;
+  background-color: var(--btn);
+  color: var(--textColor);
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--btn);
+}
+.container button:hover {
+  background-color: transparent;
+  color: var(--btn);
+  border-style: dashed;
+}
